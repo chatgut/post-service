@@ -2,25 +2,22 @@
 
 PostService is a microservice responsible for managing the storage of messages between users. The service utilizes MongoDB as the database for storing messages.
 
-## Running with Docker
 
-To run PostService using Docker, make sure you have Docker installed on your machine.
+### Running with Docker
+To run PostService using Docker with the updated image "cybertobbe/postservice2" and build the services, follow these steps:
 
-1. Pull the PostService Docker image from Docker Hub:
-
-    ```
-    docker pull postservice2
-    ```
-
- 
-
-2. Start a Docker container using the pulled image:
-
-    ```
-    docker run -p 8090:8080 --name <container> postservice2
+1. Pull the latest image from the Docker Hub:
+    ```bash
+    docker pull cybertobbe/postservice2
     ```
 
-   This will start the container and make it available on port 8090 on your local machine.
+2. Build and run the services using Docker Compose:
+    ```bash
+    docker-compose up --build postapp1 postapp2 mongodb -d
+    ```
+
+
+These commands will pull the updated image "cybertobbe/postservice2" and build the services postapp1, postapp2, and mongodb.
 
 ### Using PostService
 
