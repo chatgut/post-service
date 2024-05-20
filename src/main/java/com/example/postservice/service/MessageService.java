@@ -25,11 +25,6 @@ public class MessageService {
         return messageRepository.findAll();
     }
 
-
-   /* public List<MessageEntity> findBySenderUsername(String senderUsername) {
-        return messageRepository.findBySenderUsername(senderUsername);
-    }*/
-
     public List<EntityDto> findBySenderUsername(String senderUsername) {
         return messageRepository.findBySenderUsername(senderUsername).stream()
                 .map(this::mapToDto)
