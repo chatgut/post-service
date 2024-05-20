@@ -9,6 +9,8 @@ services:
     environment:
       SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/mydatabase
     restart: 'on-failure'
+    networks:
+        - mynetwork
     volumes:
       - mongodb:/data/db
 
@@ -22,17 +24,26 @@ services:
     environment:
       SPRING_DATA_MONGODB_URI: mongodb://mongodb:27017/mydatabase
     restart: 'on-failure'
+    networks:
+        - mynetwork
+
+
     volumes:
       - mongodb:/data/db
+
 
   mongodb:
     image: 'mongo:latest'
     ports:
       - '27017:27017'
+    networks:
+      - mynetwork
 
     volumes:
       - mongodb:/data/db
 
+networks:
+  mynetwork: {}
 volumes:
   mongodb:
 
