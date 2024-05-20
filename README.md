@@ -40,7 +40,7 @@ Example:
 
 "senderUsername": "TYPE THE NAME",
 
-"receiverUsername": "TYPE THE NAME",
+"recieverUsername": "TYPE THE NAME",
 
 "message": "TYPE THE MESSAGE"
 
