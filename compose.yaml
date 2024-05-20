@@ -1,6 +1,6 @@
 services:
   postapp1:
-    image: postservice2
+    image: cybertobbe/postservice2
     container_name: postmessage
     ports:
       - "8090:8080"
@@ -15,7 +15,7 @@ services:
       - mongodb:/data/db
 
   postapp2:
-    image: postservice2
+    image: cybertobbe/postservice2
     container_name: postmessage2
     ports:
       - "8091:8080"
